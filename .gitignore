@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Data & models (DO NOT COMMIT)
+*.pkl
+*.csv
+data/
+models/
+
+# Secrets & system
+.env
+.idea/
