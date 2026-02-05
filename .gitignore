@@ -4,7 +4,6 @@ __pycache__/
 .venv/
 
 # Data & models (DO NOT COMMIT)
-*.pkl
 *.csv
 data/
 models/
