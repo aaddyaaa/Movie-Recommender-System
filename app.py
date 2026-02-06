@@ -83,23 +83,23 @@ selected_movie_name = st.selectbox(
 if st.button("Recommend"):
 
     # ---------- Selected movie (hero section) ----------
-    st.markdown("## You selected")
+    t.markdown("### You selected")
 
-    hero_col1, hero_col2 = st.columns([1, 3])
+    hero_col1, hero_col2 = st.columns([1, 5])
+
     hero_poster = fetch_poster_by_title(selected_movie_name)
 
     with hero_col1:
         if hero_poster:
-            st.image(hero_poster, use_container_width=True)
+            st.image(hero_poster, width=120)
 
     with hero_col2:
-        st.markdown(f"### {selected_movie_name}")
-        st.caption("Because every good recommendation starts with taste.")
-
-    # Small spacing before recommendations
-    st.markdown("<br><br>", unsafe_allow_html=True)
+        st.markdown(f"**{selected_movie_name}**")
+        st.caption("Finding similar movies you might enjoy")
 
     # ---------- Recommended movies ----------
+    st.markdown("<br>", unsafe_allow_html=True)
+
     st.markdown("## 🍿 Recommended for you")
 
     recommendations = recommend(selected_movie_name)
@@ -111,3 +111,4 @@ if st.button("Recommend"):
             if poster:
                 st.image(poster, use_container_width=True)
             st.caption(title)
+
