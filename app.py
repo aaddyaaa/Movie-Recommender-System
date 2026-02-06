@@ -83,7 +83,7 @@ selected_movie_name = st.selectbox(
 if st.button("Recommend"):
 
     # ---------- Selected movie (hero section) ----------
-    t.markdown("### You selected")
+    st.markdown("### You selected")
 
     hero_col1, hero_col2 = st.columns([1, 5])
 
